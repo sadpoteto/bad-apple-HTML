@@ -1,0 +1,31 @@
+:root {
+    --cb-dim: .4vw;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+.pixel {
+    margin: 0;
+    accent-color: black;
+    width: var(--cb-dim);
+    height: var(--cb-dim);
+}
+
+.row {
+    line-height: 0%;
+    padding: 0;
+    margin: 0;
+}
+
+#container {
+    flex: 0 0 auto;
+    margin: 50px;
+}
