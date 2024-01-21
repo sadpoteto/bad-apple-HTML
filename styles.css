@@ -19,6 +19,13 @@ body {
     height: var(--cb-dim);
 }
 
+/*
+.pixel:checked {
+    appearance: none;
+    background-color: black;
+}
+*/
+
 .row {
     line-height: 0%;
     padding: 0;
