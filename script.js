@@ -7,7 +7,7 @@ let divClass = "row";
 let pixelClass = "pixel";
 
 let rowDivs = [];
-let checks = [[]];
+let checks = [];
 
 for(let i = 0; i < (horizontalCount / aspectRatio); i++) {
     rowDivs[i] = document.createElement("div");
@@ -17,12 +17,25 @@ for(let i = 0; i < (horizontalCount / aspectRatio); i++) {
 }
 
 for(let div of rowDivs) {
+    let rowNum = div.id;
+    checks[rowNum] = [];
     for(let i = 0; i < horizontalCount; i++) {
-        let rowNum = div.id;
         let temp = document.createElement("input");
         temp.type = "radio";
         temp.classList += pixelClass;
-        checks[rowNum,i] = temp;
-        div.append(checks[rowNum,i]); 
+        checks[rowNum][i] = temp;
+        div.append(checks[rowNum][i]); 
+    }
+}
+
+let blackPixelIdentifier = "#";
+
+function setFrame(frame, checks) {
+    for(let row = 0; row < checks.length; row++) {
+        let rowRaw = frame[row];
+        let rowArrayed = rowRaw.split('');
+        for(let col = 0; col < rowArrayed.length; col++) {
+            checks[row][col].checked = (rowArrayed[col] == blackPixelIdentifier);
+        }
     }
 }
