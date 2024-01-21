@@ -1,6 +1,6 @@
 let masterContainer = document.querySelector("#container");
 
-let horizontalCount = 120;
+let horizontalCount = 160;
 let aspectRatio = 4.0/3.0;
 
 let divClass = "row";

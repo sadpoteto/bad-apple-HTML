@@ -27,5 +27,9 @@ body {
 
 #container {
     flex: 0 0 auto;
+    background-color: black;
     margin: 50px;
+    padding: .5vw;
+    border-radius: .5vw;
+    box-shadow: 0 0 40px rgba(0,0,0,1);
 }
