@@ -51,8 +51,9 @@ for cnt in range(frames):
     if (currentTime - lastProgDialog) >= progDialogInterval or cnt == frames - 1:
         print(f"Processed frame {cnt+1}/{frames} ({int(100*((cnt+1)/frames))}%)")
         lastProgDialog = currentTime
-    if cnt == 10:
-        break
+
+
+
 outFile.write(str(processedFrameArray))
 outFile.close()
 print(f"Wrote array to \"{outPath}\" ({outWidth}*{outHeight})")

@@ -14,7 +14,6 @@ body {
 
 .pixel {
     margin: 0;
-    accent-color: black;
     width: var(--cb-dim);
     height: var(--cb-dim);
 }
